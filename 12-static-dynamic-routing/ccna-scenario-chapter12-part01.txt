@@ -61,3 +61,52 @@ R2#write memory
 Building configuration...
 [OK]
 R2#
+
+------------------------------------------------------
+
+R3 : 
+
+Router>enable
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#hostname R3
+R3(config)#interface GigabitEthernet8/0
+R3(config-if)#ip address 10.10.23.1 255.255.255.0
+R3(config-if)#no shutdown
+
+R3(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet8/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet8/0, changed state to up
+
+R3(config-if)#exit
+R3(config)#interface GigabitEthernet6/0
+R3(config-if)#ip address 10.10.34.2 255.255.255.0
+R3(config-if)#no shutdown
+
+R3(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet6/0, changed state to up
+
+R3(config-if)#exit
+R3(config)#exit
+R3#
+%SYS-5-CONFIG_I: Configured from console by console
+
+R3#write momory
+          ^
+% Invalid input detected at '^' marker.
+	
+R3#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R3(config)#write memory
+           ^
+% Invalid input detected at '^' marker.
+	
+R3(config)#exit
+R3#
+%SYS-5-CONFIG_I: Configured from console by console
+
+R3#write memory
+Building configuration...
+[OK]
+R3#
