@@ -1,0 +1,24 @@
+R1:
+
+R1# configure terminal
+R1(config)# interface GigabitEthernet6/0
+R1(config-if)# ip address 10.10.12.1 255.255.255.0
+R1(config-if)# no shutdown
+R1(config-if)# exit
+
+R1(config)# interface FastEthernet0/0
+R1(config-if)# ip address 10.11.15.1 255.255.255.0
+R1(config-if)# no shutdown
+R1(config-if)# exit
+
+R1(config)# interface FastEthernet1/0
+R1(config-if)# ip address 172.16.16.1 255.255.255.0
+R1(config-if)# no shutdown
+R1(config-if)# exit
+
+R1(config)# interface FastEthernet4/0
+R1(config-if)# ip address 172.16.17.1 255.255.255.0
+R1(config-if)# no shutdown
+R1(config-if)# exit
+
+R1# write memory
