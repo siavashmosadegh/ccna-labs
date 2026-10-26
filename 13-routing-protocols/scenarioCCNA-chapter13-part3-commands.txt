@@ -1,0 +1,12 @@
+
+R1 : 
+
+/// in word
+
+R2: 
+Router>enable
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#hostname R2
+R2(config)#router ospf 1
+R2(config-router)#network 0.0.0.0 255.255.255.255 area 0
